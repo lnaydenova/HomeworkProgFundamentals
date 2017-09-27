@@ -1,0 +1,38 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		string profession = Console.ReadLine();
+		int count = int.Parse(Console.ReadLine());
+		double sum = 0;
+		
+		if (profession == "Athlete")
+		{
+			sum = count * 0.7;
+			Console.WriteLine("The {0} has to pay {1:F2}.",profession, sum);
+		}
+		else if(profession == "Businessman" || profession == "Businesswoman")
+		{
+			sum = count * 1;
+			Console.WriteLine("The {0} has to pay {1:F2}.",profession, sum);
+		}
+		else if (profession == "SoftUni Student")
+		{
+			sum = count * 1.7;
+			Console.WriteLine("The {0} has to pay {1:F2}.",profession, sum);
+		}
+		else 
+		{
+			sum = count * 1.2;
+			Console.WriteLine("The {0} has to pay {1:F2}.",profession, sum);
+		}
+		
+		
+		
+		
+	}
+	
+	
+}
