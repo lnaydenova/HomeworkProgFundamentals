@@ -1,0 +1,27 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		string ingredient = Console.ReadLine();
+		int counter = 0;
+		while(ingredient != "Bake!")
+		{
+			counter++;
+			
+			Console.WriteLine("Adding ingredient {0}.", ingredient);
+			ingredient = Console.ReadLine();
+			
+		}
+		Console.WriteLine("Preparing cake with {0} ingredients.", counter);
+	
+	}
+	
+	
+}
+
+
+
+	
+
