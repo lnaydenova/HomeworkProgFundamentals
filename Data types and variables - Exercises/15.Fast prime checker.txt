@@ -1,0 +1,25 @@
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+		int range = int.Parse(Console.ReadLine());
+		for (int number = 2; number <= range; number++)
+		{	
+		    bool thing = true;
+        	for (int num1 = 2; num1 <= number/2; num1++)
+   				{
+        		if  (number % num1 == 0)
+        			{
+           				 thing = false;
+           				 
+        			}
+   	 			}
+			
+   				Console.WriteLine("{0} -> {1}", number, thing);
+		}
+
+	}
+	
+}

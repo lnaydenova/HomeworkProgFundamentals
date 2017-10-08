@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Vowel_or_digit1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string input = Console.ReadLine();
+            try
+            {
+                int num = int.Parse(input);
+                Console.WriteLine("digit");
+            }
+            catch
+            {
+                char one = char.Parse(input);
+                if (one == 'a' || one == 'e' || one == 'i' || one == 'o' || one == 'u')
+                Console.WriteLine("vowel");
+                else
+                    Console.WriteLine("other");
+            }
+        }
+    }
+}
