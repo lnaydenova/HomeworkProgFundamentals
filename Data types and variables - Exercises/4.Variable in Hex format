@@ -1,0 +1,21 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		string n1 = Console.ReadLine();
+		
+		
+		
+		Console.WriteLine(Convert.ToInt32(n1,16));
+		
+	}
+	
+	
+}
+
+
+
+	
+
