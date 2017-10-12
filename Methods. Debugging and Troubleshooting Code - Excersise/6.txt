@@ -1,0 +1,20 @@
+using System;
+					
+public class Program
+{
+	public static string IsPrime(long number)
+	{
+		if(number == 0 || number == 1) return "False";
+		for(int i = 2; i <= Math.Sqrt(number); i++)
+		{
+			if(number % i == 0) return "False";
+		}
+		return "True";
+	}
+	public static void Main()
+	{
+		long number = long.Parse(Console.ReadLine());
+		
+		Console.WriteLine(IsPrime(number));
+	}
+}

@@ -1,0 +1,55 @@
+using System;
+
+namespace Program
+{
+	public class Program
+	{
+		public static void Main()
+		{
+			string figureType = Console.ReadLine().ToLower();
+			double input1;
+			double input2;
+			switch (figureType)
+			{
+				case "triangle":
+					input1 = double.Parse(Console.ReadLine());
+					input2 = double.Parse(Console.ReadLine());
+					Console.WriteLine("{0:f2}", PrintTriangleArea(input1, input2));
+					break;
+				case "square":
+					input1 = double.Parse(Console.ReadLine());
+					Console.WriteLine("{0:f2}", PrintSquareArea(input1));
+					break;
+				case "rectangle":
+					input1 = double.Parse(Console.ReadLine());
+					input2 = double.Parse(Console.ReadLine());
+					Console.WriteLine("{0:f2}", PrintRectangleArea(input1, input2));
+					break;
+				case "circle":
+					input1 = double.Parse(Console.ReadLine());
+					Console.WriteLine("{0:f2}", PrintCircleArea(input1));
+					break;
+			}
+		}
+
+		public static double PrintTriangleArea(double b, double h)
+		{
+			return (b * h) / 2;
+		}
+
+		public static double PrintSquareArea(double a)
+		{
+			return a * a;
+		}
+
+		public static double PrintRectangleArea(double w, double hRec)
+		{
+			return w * hRec;
+		}
+
+		public static double PrintCircleArea(double r)
+		{
+			return Math.PI * r * r;
+		}
+	}
+}
