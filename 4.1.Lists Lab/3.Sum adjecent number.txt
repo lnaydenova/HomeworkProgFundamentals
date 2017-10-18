@@ -1,0 +1,45 @@
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+public class Program
+{
+    public static void Main()
+    {
+        List<decimal> numbers = Console.ReadLine().Split(' ').Select(decimal.Parse).ToList();
+        bool hasSummed = true;
+      
+        while (hasSummed)
+        {
+            hasSummed = false;
+            decimal sum = 0;
+            int index = 0;
+            for (int i = 0; i < numbers.Count; i++)
+            {
+                for (int j = i+1; j < numbers.Count; j++)
+                {
+                    if (numbers[i] == numbers[j])
+                    {
+                        index = i;
+                        sum = numbers[i] + numbers[j];
+                        hasSummed = true;
+                        break;
+                    }
+                    else break;
+                }
+                if (hasSummed)
+                {
+                    break;
+                }
+            }
+
+            if (hasSummed)
+            {
+                numbers.RemoveRange(index, 2);
+                numbers.Insert(index, sum);
+            }
+        }
+
+        Console.WriteLine(string.Join(" ", numbers));
+    }
+}

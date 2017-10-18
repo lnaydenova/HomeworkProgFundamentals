@@ -1,0 +1,65 @@
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+public class Program
+{
+	public static void Main()
+	{
+		List<int> numbers = Console.ReadLine().Split(' ').Select(int.Parse).ToList();
+		
+		
+		while(true)
+		{
+			string[] inputLine = Console.ReadLine().Split(' ').ToArray();
+			
+			if (inputLine[0] == "Odd")
+			{
+				for(int i = 0; i < numbers.Count; i++)
+				{
+					if(numbers[i] % 2 == 1)
+					{
+						Console.Write("{0} ", numbers[i]);
+					}
+				}
+				break;
+			}
+			
+			if(inputLine[0] == "Even")
+			{
+				foreach(int num in numbers)
+				{
+					if(num % 2 == 0)
+					{
+						Console.Write("{0} ", num);
+					}
+				}
+				break;
+			}
+			
+			
+			if(inputLine[0] == "Delete")
+			{
+				int number = int.Parse(inputLine[1]);
+				
+				for(int i = 0; i < numbers.Count; i++)
+				{
+					if(number == numbers[i])
+					{
+						numbers.Remove(numbers[i]);
+						i--;
+					}
+				}
+			}
+			
+			
+			if(inputLine[0] == "Insert")
+			{
+				int number = int.Parse(inputLine[1]);
+				int position = int.Parse(inputLine[2]);
+				
+				numbers.Insert(position, number);
+			}
+		}
+	}
+}

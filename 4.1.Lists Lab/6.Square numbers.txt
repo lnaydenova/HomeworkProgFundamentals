@@ -1,0 +1,32 @@
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+public class Program
+{
+	public static void Main()
+	{
+		List<int> numbers = Console.ReadLine().Split(' ').Select(int.Parse).ToList();
+		List<int> results = new List<int>();
+		
+		
+		for (int i = 0; i < numbers.Count; i++)
+		{
+			
+			 double result = Math.Sqrt(numbers[i]);
+					
+			if (result%1 == 0)
+				{
+				
+					results.Add(numbers[i]);
+					
+				}
+			
+		}
+		results.Sort();
+		results.Reverse();
+		
+		
+		Console.WriteLine(String.Join(" ", results));
+	}
+}
